@@ -1,0 +1,21 @@
+body {
+    font-family: 'K2D', serif;
+}
+
+.logopage {
+    margin: 0;
+    padding: 0;
+    background-color: #616FA0;
+}
+
+.container{
+    margin: 0;
+    border: 1px solid #616FA0;
+}
+
+.logo {
+    margin: 23% auto 22%;
+    display: block;
+    width: 3.5%;
+    height: auto;
+}
