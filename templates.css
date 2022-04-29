@@ -1,0 +1,88 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #FFFFFF;
+    font-family: 'K2D', sans-serif;
+}
+
+.container1{
+    background: #616FA0;
+    color: white;
+    display: flex;
+    width: 100%;
+    max-height: 9em;
+}
+
+.container1 .IconLogo{
+    margin: 1em;
+}
+
+.container1 .IconLogo img{
+    height: 67.14px;
+    width: 70px;
+}
+
+.container1 .HeadText{
+    margin: 1em 1em;
+    padding: 0;
+    display: block;
+}
+
+.container1 .HeadText h1{
+    margin: 0 0 0 0;  
+    padding: 0;
+    color: #FFFFFF;
+    font-size: 25px;
+}
+
+.container1 .HeadText p{
+    margin: 10px 0 0 0;
+    padding: 0;
+    color: #FFFFFF;
+    font-size: 18px;
+}
+
+.container_content{
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.container2{
+    display: block;
+    background-color: #C5CCE7;
+    width: 20em;
+    height: initial;
+}
+
+.section{
+    margin: 2em 1em 1em 1em;
+    height: 31.2em;
+}
+
+.section .HeadSection{
+    margin: 1em 0 1em 0;
+    padding: 0 0 0.5em 0;
+    border-bottom: 2px solid #FFFFFF;
+    font-size: 24px;
+    color: #616FA0;
+}
+
+.section .HeadSection p{
+    padding: 0;
+    margin: 0;
+    background-color: #FFFFFF;
+}
+
+.What{
+    width: 20em;
+    background-color: #616FA0;
+    bottom: 0;
+    display: flex;
+}
+
+.What img{
+    width: 56px;
+    height: 50.41px;
+    margin: 24px;
+}
