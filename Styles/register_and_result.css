@@ -1,0 +1,104 @@
+.container3{
+    /* border: 1px solid black; */
+    width: 80em;
+    color: #616FA0;
+    padding-bottom: 3em;
+}
+
+* li{
+    list-style: none;
+}
+
+/* -------------------------------- */
+
+.Name{
+    /* border: 1px solid black; */
+}
+
+.Name ul{
+    margin: 0;
+    padding: 2%;
+    display: flex;
+    /* border: 1px solid black; */
+}
+
+.Name ul li{
+    width: 100%;
+    font-size: 24px;
+    margin: 0 1em 0 1em;
+    text-align: center;
+    /* border: 1px solid black; */
+}
+
+/* -------------------------------- */
+
+.HeadTable{
+    /* border: 1px solid black; */
+}
+
+.HeadTable ul{
+    margin: 0 5%;
+    padding: 1% 1% 0 0;
+    display: flex;
+    /* border: 1px solid black; */
+}
+
+.HeadTable ul li{
+    width: 100%;
+    padding: 1%;
+    font-size: 24px;
+    text-align: center;
+    color: #FFFFFF;
+    border: 2.5px solid #FFFFFF;
+    background-color: #616FA0;
+}
+
+/* -------------------------------- */
+
+.BodyTable{
+    /* border: 1px solid black; */
+}
+
+.BodyTable ul{
+    margin: 0 5%;
+    padding: 0% 1% 0 0;
+    display: flex;
+    /* border: 1px solid black; */
+}
+
+.BodyTable ul li{
+    width: 100%;
+    padding: 1%;
+    font-size: 20px;
+    color: #616FA0;
+    text-align: left;
+    border: 2.5px solid #FFFFFF;
+}
+
+.sty1{
+    background-color: #C5CCE7;
+}
+/* -------------------------------- */
+
+.button{
+    margin: 2em 6% 0 5%;
+    text-align: center;
+}
+
+button{
+    width: 10em;
+    padding: 1%;
+    font-size: 24px;
+    text-decoration: none;
+    color: #FFFFFF;
+    background-color: #616FA0;
+    border: 1px solid #616FA0;
+}
+
+.skin{
+    margin: 0 6% 0 5%;
+    padding: 2%;
+    height: 1em;
+    border: 2.5px solid #FFFFFF;
+    background-color: #616FA0;
+}
