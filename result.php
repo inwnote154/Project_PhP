@@ -78,6 +78,7 @@
                 <button>ลงทะเบียนเรียน</button>
             </div>
 
+            
             <div class="main_box">
                 <div class="textbox">
                     คุณยังไม่ได้ทำการลงทะเบียนเรียน กรุณาลงทะเบียนเรียนก่อน

@@ -1,6 +1,6 @@
 .container3{
     /* border: 1px solid black; */
-    width: 80em;
+    min-width: 74.9em;
     color: #616FA0;
     padding-bottom: 3em;
 }

@@ -123,6 +123,8 @@
             <div class="button">
                 <button>ลงทะเบียนเรียน</button>
             </div>
+
+            
             <div class="main_box">
                 <div class="textbox">
                     คุณได้ทำการลงทะเบียนเรียน เสร็จเรียบร้อยแล้ว

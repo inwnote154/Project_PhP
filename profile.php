@@ -56,8 +56,19 @@
                 </ul>
             </div>
             <div class="main_box">
-                <div>
-                    
+                <div class="box">
+                    <div class="">
+                        <p>asd</p>
+                        <div class="">
+                            jihklgfc
+                        </div>
+                    </div>
+                    <div class="">
+                        <p>wes</p>
+                        <div class="">
+                            rtfdvsathyrd
+                        </div>
+                    </div>
                 </div>
                 <?php 
                     // echo $_SESSION["show1"]; // งง
