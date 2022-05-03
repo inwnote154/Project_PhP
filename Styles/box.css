@@ -1,0 +1,17 @@
+.main_box{
+    background-color: #616FA0;
+    color: #FFFFFF;
+    margin: 0 6% 0 5%;
+    padding: 1%;
+    /* padding: 10em 10em; */
+    font-size: 24px;
+
+    border: 2.5px solid #FFFFFF;
+}
+
+.main_box .textbox{
+    font-size: 24px;
+    margin: 20% 35%;
+    text-align: center;
+    /* border: 1px solid black; */
+}

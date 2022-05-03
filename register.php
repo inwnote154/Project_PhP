@@ -1,3 +1,7 @@
+<?php include('Database/server.php');  
+    session_start();
+?>
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -5,6 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="Styles/templates.css">
     <link rel="stylesheet" type="text/css" href="Styles/register_and_result.css">
+    <link rel="stylesheet" type="text/css" href="Styles/box.css">
     <link href="https://fonts.googleapis.com/css2?family=K2D:wght@300&display=swap" rel="stylesheet">
     <title>Register</title>
 </head>
@@ -21,17 +26,17 @@
     <div class="container_content">
         <div class="container2">
             <div class="section">
-                <div class="HeadSection">
-                    <a href=""><p>ลงทะเบียนเรียน</p></a>
+            <div class="HeadSection">
+                    <a href="register.php"><p>ลงทะเบียนเรียน</p></a>
                 </div>
                 <div class="HeadSection">
-                    <a href="">ผลลงทะเบียนเรียน</a>
+                    <a href="result.php">ผลลงทะเบียนเรียน</a>
                 </div>
                 <div class="HeadSection">
-                    <a href="">ประวัตินักเรียน</a>
+                    <a href="profile.php">ประวัตินักเรียน</a>
                 </div>
                 <div class="HeadSection">
-                    <a href="">ออกจากระบบ</a>
+                    <a href="login.php">ออกจากระบบ</a>
                 </div>
             </div>
             <div class="What">
@@ -41,13 +46,14 @@
             </div>
         </div>
         <div class="container3">
-
             <div class="Name">
                 <!-- รับข้อมูลประวัติมาแสดง -->
                 <ul>
-                    <li>เลขประจำตัว: 70325</li>
-                    <li>ชื่อ - นามสกุล: ยาดา สาระสมแสง</li>
+                    
+                    <li>เลขประจำตัว: <?php echo $_SESSION["studentid"] ?></li>
+                    <li>ชื่อ - นามสกุล: <?php echo $_SESSION["namethai"] ?></li>
                     <li>ภาคการศึกษาที่: 1/2565</li>
+                    
                 </ul>
             </div>
             <div class="HeadTable">
@@ -59,7 +65,6 @@
             </div>
 
             <!-- รับข้อมูลวิชามาแสดง -->
-
 
             <div class="BodyTable">
                 <ul>
@@ -118,7 +123,11 @@
             <div class="button">
                 <button>ลงทะเบียนเรียน</button>
             </div>
-            
+            <div class="main_box">
+                <div class="textbox">
+                    คุณได้ทำการลงทะเบียนเรียน เสร็จเรียบร้อยแล้ว
+                </div>
+            </div>
         </div>
     </div>
 
