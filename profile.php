@@ -59,35 +59,56 @@
             </div>
             <div class="main_box">
                 <div class="box">
-                    <div class="">
-                        <p>asd</p>
-                        <div class="">
-                            jihklgfc
+                    <div class="box1">
+                        <u>ข้อมูลนักเรียน</u>
+                        <div class="box2">
+                            <div class="br">
+                                <p>เลขประจำตัว :</p><div class="box2-1"><?php echo $_SESSION["studentid"];?></div> 
+                                <p>ชื่อ-นามสกุล :</p><div class="box2-2"><?php echo $_SESSION["namethai"];?></div> 
+                                <p>เพศ :</p><div class="box2-1"><?php echo $_SESSION["gender"];?></div>
+                            </div>
+                            <div class="br">
+                                <p>ระดับชั้น :</p><div class="box2-3"><?php echo $_SESSION["class"];?></div> 
+                                <p>ห้องเรียนที่ :</p><div class="box2-4"><?php echo $_SESSION["room"];?></div> 
+                                <p>ปีที่เข้าเรียน :</p><div class="box2-1"><?php echo $_SESSION["year"];?></div>
+                            </div>
                         </div>
                     </div>
-                    <div class="">
-                        <p>wes</p>
-                        <div class="">
-                            rtfdvsathyrd
+                    <div class="box1">
+                        <u>ข้อมูลนักเรียน</u>
+                        <div class="box2">
+                            <div class="br">
+                                <p>บัตรประชาชน :</p><div class="box2-2"><?php echo $_SESSION["show1"];?></div> 
+                                <p>เชื้อชาติ :</p><div class="box2-1"><?php echo $_SESSION["regin"];?></div> 
+                                <p>สัญชาติ :</p><div class="box2-1"><?php echo $_SESSION["nation"];?></div>
+                            </div>
+                            <div class="br">
+                                <p>ศาสนา :</p><div class="box2-3"><?php echo $_SESSION["religion"];?></div> 
+                                <p>วันเกิด :</p><div class="box2-3"><?php echo $_SESSION["birthday"];?></div> 
+                                <p>เบอร์โทรศัพท์ :</p><div class="box2-3"><?php echo $_SESSION["phone"];?></div> 
+                            </div>
+                            <div class="br">
+                                <p>ที่อยู่ :</p><div class="box2-5"><?php echo $_SESSION["address"];?></div> 
+                            </div>
                         </div>
                     </div>
                 </div>
-                <?php 
-                    // echo $_SESSION["show1"]; // งง
-                    echo $_SESSION["studentid"];
-                    echo $_SESSION["namethai"];
-                    echo $_SESSION["nameeng"];
-                    echo $_SESSION["gender"];
-                    echo $_SESSION["class"];
-                    echo $_SESSION["room"];
-                    echo $_SESSION["year"];
-                    echo $_SESSION["regin"];
-                    echo $_SESSION["nation"];
-                    echo $_SESSION["religion"];
-                    echo $_SESSION["birthday"];
-                    echo $_SESSION["address"];
-                    echo $_SESSION["phone"];
-                ?>
+
+                <!-- <?php echo $_SESSION["show1"];?>
+                <?php echo $_SESSION["studentid"];?>
+                <?php echo $_SESSION["namethai"];?>
+                <?php echo $_SESSION["nameeng"];?>
+                <?php echo $_SESSION["gender"];?>
+                <?php echo $_SESSION["class"];?>
+                <?php echo $_SESSION["room"];?>
+                <?php echo $_SESSION["year"];?>
+                <?php echo $_SESSION["regin"];?>
+                <?php echo $_SESSION["nation"];?>
+                <?php echo $_SESSION["religion"];?>
+                <?php echo $_SESSION["birthday"];?>
+                <?php echo $_SESSION["address"];?>
+                <?php echo $_SESSION["phone"];?> -->
+                
             </div>
         </div>
     </div>

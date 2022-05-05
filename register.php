@@ -99,7 +99,7 @@
                 <div class="skin"></div>
                 <div class="button">
                     <form action ="checkregister.php" method="post">
-                        <button class= "submit" type ="submit" name="register">ลงทะเบียนเรียน</button>
+                        <button class= "submit" type ="submit" name="register" onclick = "functionAlert();">ลงทะเบียนเรียน</button>
                     </form>
                 </div>
             <?php } else {?>
@@ -114,8 +114,8 @@
 
     <script>
         document.querySelector('.submit').onclick = function(){
-                alert("เมื่อทำการลงทะเบียนเสร็จเรียบร้อยแล้ว กรุณาเข้าไปที่หน้าผลลงทะเบียนเรียนเพื่อตรวจสอบความถูกต้อง และขอใบชำระเงินกับทางเจ้าหน้าที่ ");
-            }
+            alert("คุณได้ทำการลงทะเบียนเรียนเสร็จเรียบร้อยแล้ว \n\nเมื่อทำการลงทะเบียนเสร็จเรียบร้อยแล้ว กรุณาเข้าไปที่หน้าผลลงทะเบียนเรียนเพื่อตรวจสอบความถูกต้อง และขอใบชำระเงินกับทางเจ้าหน้าที่");
+        }
     </script>
     
 </body>
