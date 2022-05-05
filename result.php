@@ -1,22 +1,24 @@
 <?php
-        include('Database/server.php');  
-        session_start();
-        $id = $_SESSION["id"];
-        $check1 = mysqli_query($conn,"SELECT * FROM Check1 order by Class ");
-        $check2 = mysqli_query($conn,"SELECT * FROM Check2 order by Class ");
-        $data = mysqli_fetch_array($check1);
-        $data2 = mysqli_fetch_array($check2);
+    include('Database/server.php');  
+    session_start();
+    $id = $_SESSION["id"];
+    $check1 = mysqli_query($conn,"SELECT * FROM Check1 order by Class ");
+    $check2 = mysqli_query($conn,"SELECT * FROM Check2 order by Class ");
+    $data = mysqli_fetch_array($check1);
+    $data2 = mysqli_fetch_array($check2);
+    //echo $data[3];
+    //echo $data2[3];
+    if($id === $data[0]){
         //echo $data[3];
+        $sql = mysqli_query($conn,"SELECT * FROM subject01");
+    }
+    else if($id === $data2[0]){
         //echo $data2[3];
-        if($id === $data[0]){
-            //echo $data[3];
-            $sql = mysqli_query($conn,"SELECT * FROM subject01");
-        }
-        else if($id === $data2[0]){
-            //echo $data2[3];
-            $sql = mysqli_query($conn,"SELECT * FROM subject02");
-        }
+        $sql = mysqli_query($conn,"SELECT * FROM subject02");
+    }
 ?>
+
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -116,7 +118,7 @@
                     <div class="skin"></div>
                     <div class="button">
                         <form action ="resulthdb.php" method="post">
-                            <input class="Pay"type ="submit" name="Pay" value="ขอใบชำระเงิน" >
+                            <button class= "pay" type ="submit" name="Pay">ขอใบชำระเงิน</button>
                         </form>
                     </div>
                     

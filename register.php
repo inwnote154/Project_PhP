@@ -18,6 +18,8 @@
     }
 
 ?>
+
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -97,7 +99,7 @@
                 <div class="skin"></div>
                 <div class="button">
                     <form action ="checkregister.php" method="post">
-                        <input class= "submit"type ="submit" name="register" value="ลงทะเบียนเรียน">
+                        <button class= "submit" type ="submit" name="register">ลงทะเบียนเรียน</button>
                     </form>
                 </div>
             <?php } else {?>
