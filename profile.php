@@ -25,9 +25,11 @@
     <div class="container_content">
         <div class="container2">
             <div class="section">
+
                 <div class="HeadSection">
                     <a href="register.php">ลงทะเบียนเรียน</a>
                 </div>
+
                 <div class="HeadSection">
                     <a href="result.php">ผลลงทะเบียนเรียน</a>
                 </div>

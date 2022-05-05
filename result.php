@@ -1,5 +1,21 @@
-<?php include('Database/server.php');
-    session_start();
+<?php
+        include('Database/server.php');  
+        session_start();
+        $id = $_SESSION["id"];
+        $check1 = mysqli_query($conn,"SELECT * FROM Check1 order by Class ");
+        $check2 = mysqli_query($conn,"SELECT * FROM Check2 order by Class ");
+        $data = mysqli_fetch_array($check1);
+        $data2 = mysqli_fetch_array($check2);
+        //echo $data[3];
+        //echo $data2[3];
+        if($id === $data[0]){
+            //echo $data[3];
+            $sql = mysqli_query($conn,"SELECT * FROM subject01");
+        }
+        else if($id === $data2[0]){
+            //echo $data2[3];
+            $sql = mysqli_query($conn,"SELECT * FROM subject02");
+        }
 ?>
 <html lang="en">
 <head>
@@ -25,7 +41,7 @@
     <div class="container_content">
         <div class="container2">
             <div class="section">
-            <div class="HeadSection">
+                <div class="HeadSection">
                     <a href="register.php">ลงทะเบียนเรียน</a>
                 </div>
                 <div class="HeadSection">
@@ -50,45 +66,69 @@
                 <ul>
                     <li>เลขประจำตัว: <?php echo $_SESSION["studentid"] ?></li>
                     <li>ชื่อ - นามสกุล: <?php echo $_SESSION["namethai"] ?></li>
-                    <li>ภาคการศึกษาที่: 1/2565</li>
-                    
+                    <li>ภาคการศึกษาที่: 1/2565</li> 
                 </ul>
             </div>
-
-            <div class="HeadTable">
-                <ul>
-                    <li>รหัสวิชา</li>
-                    <li>ชื่อวิชา</li>
-                    <li>วันเวลา</li>
-                </ul>
-            </div>
-
-            <!-- รับข้อมูลวิชามาแสดง -->
-
-            <div class="BodyTable">
-                <ul>
-                    <li class="sty1">ท010365</li>
-                    <li class="sty1">ภาษาไทย</li>
-                    <li class="sty1">จันทร์ พุธ ศุกร 09.00 - 10.00</li>
-                </ul>
-                
-            </div>
-            <div class="skin"></div>
-            <div class="button">
-                <button>ลงทะเบียนเรียน</button>
-            </div>
-
-            
-            <div class="main_box">
+            <?php
+                $Actived = 1;
+                $Studentid = $_SESSION["studentid"];
+                $query = "SELECT * FROM infomation WHERE Active = " . $Actived . " AND studentid = ". $Studentid . " " ;
+                $query = mysqli_query($conn, $query);
+                $result = mysqli_fetch_assoc($query);
+            ?>
+            <?php if(!$result) {?>
+                <div class="main_box">
                 <div class="textbox">
                     คุณยังไม่ได้ทำการลงทะเบียนเรียน กรุณาลงทะเบียนเรียนก่อน
                 </div>
             </div>
+            <?php } else {?>
+                <?php
+                    $Pay = 1;
+                    $Studentid = $_SESSION["studentid"];
+                    $query = "SELECT * FROM infomation WHERE Pay_Active = " . $Pay . " AND studentid = ". $Studentid . " " ;
+                    $query = mysqli_query($conn, $query);
+                    $result = mysqli_fetch_assoc($query);
+                ?>
+                <?php if($result){ ?>
+                    <div class="main_box">
+                        <div class="textbox">
+                            คุณได้ทำการขอใบชำระเงินเรียบร้อยแล้ว
+                        </div>
+                    </div>
+                <?php } else {?>
+                    <div class="HeadTable">
+                        <ul>
+                            <li>รหัสวิชา</li>
+                            <li>ชื่อวิชา</li>
+                            <li>วันเวลา</li>
+                        </ul>
+                    </div>
+                    <div class="BodyTable">
+                        <?php foreach($sql as $row) {?>
+                            <ul>
+                                <li class="sty1"><?php echo $row["SJid"];?></li>
+                                <li class="sty1"><?php echo $row["SJName"];?></li>
+                                <li class="sty1"><?php echo $row["SJtime"];?></li>
+                            </ul>
+                        <?php }?>
+                    </div>
+                    <div class="skin"></div>
+                    <div class="button">
+                        <form action ="resulthdb.php" method="post">
+                            <input class="Pay"type ="submit" name="Pay" value="ขอใบชำระเงิน" >
+                        </form>
+                    </div>
+                    
+                <?php } ?>
+            <?php }?>
         </div>
     </div>
 
     <script>
-
+        document.querySelector('.Pay').onclick = function(){
+                alert("เจ้าหน้าที่จะทำการตรวจสอบและจะส่งใบชำระเงินให้ แก่ท่านผ่านทางอีเมลส่วนตัวของทางโรงเรียน");
+            }
     </script>
     
 </body>

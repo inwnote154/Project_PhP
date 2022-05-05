@@ -5,7 +5,6 @@
         $password = $pass;
         $query = "SELECT * FROM login_db WHERE studentid = '$studentid' AND password = '$password' ";
         $result = mysqli_query($conn, $query);
-
         if(mysqli_num_rows($result) == 1){
             $sqltxt = mysqli_query($conn,"SELECT * FROM infomation order by studentid");
             while ( $rs = mysqli_fetch_array ( $sqltxt ) )
