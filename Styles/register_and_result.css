@@ -85,7 +85,7 @@
     text-align: center;
 }
 
-button{
+.button form input{
     width: 10em;
     padding: 1%;
     font-size: 24px;

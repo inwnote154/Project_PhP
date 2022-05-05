@@ -23,8 +23,19 @@
     
     //echo $_SESSION["studentid"];
     //echo $_SESSION["namethai"];
-    
-    header("location: register.php");
+    //header("location: register.php");
+    /*
+    echo $id;
+    echo $data["class"];
+    */
+
+    $sqltxt = mysqli_query($conn,"SELECT * FROM checksj order by Class");
+    while ( $rs = mysqli_fetch_array($sqltxt) ){
+        if($rs[0] === $data["class"]){
+            //echo $rs[0];
+            header("location: checkSJ.php?id=$rs[0]");
+        }
+    }
     // Check condition
     /*else{
         echo "Fuck";
